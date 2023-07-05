@@ -1,0 +1,9 @@
+{
+    "name": "server_using_express",
+    "version": "1.0.0",
+    "author": "anish",
+    "description": "A project related to express",
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
