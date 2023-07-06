@@ -1,0 +1,32 @@
+var express = require("express");
+
+var app = express();
+
+app.use(("/admin"),(req,res,next) => {
+    next("Unauthorized user");
+});
+
+
+app.get("/",(req,res,next) => {
+    console.log("anish")
+    res.send("Hello World!")
+});
+
+app.get("/about",(req,res,next) => {
+    console.log("anish giri")
+    res.send("what about You?")
+});
+
+app.use((req,res,next) => {
+    res.send("Page not found")
+});
+
+app.use((err,req,res,next) => {
+    res.status(500).send(err);
+})
+
+
+app.listen(4000,() => {
+    console.log("server is listenning is port 4k");
+});
+
